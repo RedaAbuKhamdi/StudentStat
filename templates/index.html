@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/index_style.css') }}">
+    <title>StudentStats</title>
+</head>
+<body>
+    <header class="header">
+        Учетная система
+    </header>
+    <nav class="nav">
+        <div class="nav-item">
+            <a href="/info">Информация о проведенных занятиях</a>
+        </div>
+        <div class="nav-item">
+            <a href="">Списки групп</a>
+        </div>
+    </nav>
+    {% block content %}{% endblock %}
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="{{ url_for('static',filename = 'js/main.js') }}"></script>
+</html>

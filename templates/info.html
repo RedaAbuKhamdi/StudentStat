@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<section class="controls">
+    <div class="filter-controls">
+        <label for="Teacher">Выберете преподавателя</label>
+        <select id="Teacher" name="Teacher" class="select-input">
+            {% for name in teachers['name'] %}
+            <option value="{{ name }}" class="select-option">{{ name }}</option>
+            {% endfor %}
+        </select>
+        <label for="Group">Выберете группу</label>
+        <select id="Group" name="Group" class="select-input">
+            {% for group in groups['group_name'] %}
+            <option value="{{ group }}" class="select-option">{{ group }}</option>
+            {% endfor %}
+        </select>
+        <div style="text-align: right;">
+            <input type="button" onclick="load_lesson_info()" class="control-button" value="Найти данные">
+        </div>
+    </div>
+    <div class="action-controls">
+
+    </div>
+</section>
+<section class="active-section">
+    
+</section>
+{% endblock %}
